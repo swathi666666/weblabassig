@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume and Bio-data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #af4c75;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333333;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 2rem;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" onclick="showPage('resume')">Resume</a>
+        <a href="javascript:void(0)" onclick="showPage('biodata')">Bio-data</a>
+    </nav>
+    <main>
+        <div id="resume" class="content">
+            <h2>Resume</h2>
+            <p><strong>Name:</strong> Swathi M</p>
+            <p><strong>Email:</strong> swathigowda@gmail.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Objective:</strong> To leverage my skills and experience in software development to contribute to innovative projects.</p>
+            <h3>Education</h3>
+            <ul>
+                <li>Bachelor of Computer Science Engineering in city Engineering College  </li>
+                <li>High School puc,Maruthi school </li>
+            </ul>
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: HTML, CSS, JavaScript, Python</li>
+                <li>Frameworks: React, Node.js</li>
+                <li>Tools: Git, VS Code</li>
+            </ul>
+        </div>
+
+        <div id="biodata" class="content" style="display: none;">
+            <h2>Bio-data</h2>
+            <p><strong>Full Name:</strong> Swathi M</p>
+            <p><strong>Date of Birth:</strong> January 24,2004</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Marital Status:</strong> Single</p>
+            <p><strong>Nationality:</strong> Indian</p>
+            <p><strong>Languages Known:</strong> English, kannada</p>
+            <p><strong>Hobbies:</strong> Reading, Traveling, Coding</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 swathi. All rights reserved.
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+
+            const selectedSection = document.getElementById(pageId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
